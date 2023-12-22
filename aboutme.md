@@ -8,8 +8,8 @@ Hey ! Meet the awesome team behind this project !
 
 | People            | Favourite Beer  | Contact                      |
 |-------------------|-----------------|------------------------------|
-| Tristan Carruzzo  | beer1           | tristan.carruzzo@epfl.ch     |
-| Victor Dubien     | [Beer]          | victor.dubien@epfl.ch        |
-| Agatha Hunter     | [Beer]          | agatha.hunter@epfl.ch        |
-| Thamin Maurer     | [Beer]          | thamin.maurer@epfl.ch        |
-| Anne-Valérie Preto| [Beer]          | anne-valerie.preto@epfl.ch   |
+| Tristan Carruzzo  | Acid Trip       | tristan.carruzzo@epfl.ch     |
+| Victor Dubien     | Chouffe de Noël | victor.dubien@epfl.ch        |
+| Agatha Hunter     | Tripel Karmeliet| agatha.hunter@epfl.ch        |
+| Thamin Maurer     | Cuvée des trolls| thamin.maurer@epfl.ch        |
+| Anne-Valérie Preto| Kwak            | anne-valerie.preto@epfl.ch   |
