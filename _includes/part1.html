@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Unveiling the Data</title> 
-
-    <style>
+   
+   <style>
         .iframe-container {
             display: flex;
+            width: 100%; /* Make the container take the full width */
         }
 
         .iframe-container iframe {
-            margin-right: 5px; /* Adjust the margin as needed */
+            flex: 1; /* Each iframe takes equal space */
+            margin: 0; /* Remove margin */
         }
     </style>
 </head>
