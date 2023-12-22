@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<p>Once we were confident with the extracted serving styles, it was time to analyze and try to answer our initial question! First, we looked at the distribution of the grades for each aspect of the tasting palette: aroma, palate, taste, appearance, and overall grade, for each serving style.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Unveiling the Data</title> 
+</head>
 
-<iframe src="/assets/plots/radar_plot_aspect_serving.html" width="825" height="625" frameborder="0"></iframe>
-<iframe src="/assets/plots/histogram_plot.html" width="825" height="625" frameborder="0"></iframe>
+<body>
 
-<p>We did this using a t-test, which yielded each time a p-value lower than 0.05, suggesting that there was a statistically significant difference in these scores, based on the serving style. Then, we realized that the number of samples was very uneven between the serving styles (lots of bottles, a moderate number of draft, and a few cans), so we needed to find a test that was insensitive to the sample size when comparing distributions: the Kruskal-Wallis test. This also yielded p-values very close to 0, suggesting once again that the distributions were different. But where does the difference come from? Because we cannot affirm that we have not neglected some common confounders such as the beer group or some region of the world.</p>
+    <p>Once we were confident with the extracted serving styles, it was time to analyze and try to answer our initial question! First, we looked at the distribution of the grades for each aspect of the tasting palette: aroma, palate, taste, appearance, and overall grade, for each serving style.</p>
 
-<iframe src="/assets/plots/BA_04_ttest.html" width="825" height="625" frameborder="0"></iframe>
+    <iframe src="/assets/plots/radar_plot_aspect_serving.html" width="825" height="625" frameborder="0"></iframe>
+    <iframe src="/assets/plots/histogram_plot.html" width="825" height="625" frameborder="0"></iframe>
 
-<p>Therefore, we started by filtering our data once more, to evaluate beers that had at least 7 reviews in each serving style, to control for that variable. But the results were very similar, the p-values yielded by the Kruskal-Wallis test are still way below 0.05. This means that the difference in the ratings <strong>does not come from the serving style!</strong></p>
+    <p>We did this using a t-test, which yielded each time a p-value lower than 0.05, suggesting that there was a statistically significant difference in these scores, based on the serving style. Then, we realized that the number of samples was very uneven between the serving styles (lots of bottles, a moderate number of draft, and a few cans), so we needed to find a test that was insensitive to the sample size when comparing distributions: the Kruskal-Wallis test. This also yielded p-values very close to 0, suggesting once again that the distributions were different. But where does the difference come from? Because we cannot affirm that we have not neglected some common confounders such as the beer group or some region of the world.</p>
 
-<iframe src="/assets/plots/comparison_of_aspects.html" width="825" height="625" frameborder="0"></iframe>
-    
-<iframe src="/assets/plots/bar_plot_beer_group.html" width="825" height="625" frameborder="0"></iframe>
+    <iframe src="/assets/plots/BA_04_ttest.html" width="825" height="625" frameborder="0"></iframe>
+
+    <p>Therefore, we started by filtering our data once more, to evaluate beers that had at least 7 reviews in each serving style, to control for that variable. But the results were very similar, the p-values yielded by the Kruskal-Wallis test are still way below 0.05. This means that the difference in the ratings <strong>does not come from the serving style!</strong></p>
+
+    <iframe src="/assets/plots/comparison_of_aspects.html" width="825" height="625" frameborder="0"></iframe>
+        
+    <iframe src="/assets/plots/bar_plot_beer_group.html" width="825" height="625" frameborder="0"></iframe>
+
+</body>
+
+</html>
