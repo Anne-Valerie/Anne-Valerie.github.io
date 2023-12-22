@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Unveiling the Data</title> 
+
+    <style>
+        .iframe-container {
+            display: flex;
+        }
+
+        .iframe-container iframe {
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+    </style>
 </head>
 
 <body>
@@ -16,9 +26,10 @@
     <p>To start, let's take a look at the distribution of beer styles and the number of reviews each beer has received.</p>
     
     
-    
-    <iframe src="/assets/figures/top10_beer_style.html" width="625" height="425" frameborder="0"></iframe>
-    <iframe src="/assets/figures/beer_nbr_reviews.html" width="625" height="425" frameborder="0"></iframe>
+    <div class="iframe-container">
+        <iframe src="/assets/figures/top10_beer_style.html" width="625" height="425" frameborder="0"></iframe>
+        <iframe src="/assets/figures/beer_nbr_reviews.html" width="625" height="425" frameborder="0"></iframe>
+    </div>
 
 
 
