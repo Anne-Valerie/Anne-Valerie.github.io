@@ -7,12 +7,6 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Unveiling the Data</title> 
    
-    <style>
-        .content-container {
-          width: 70%; /* Adjust the percentage as needed */
-          margin: 0 auto; /* Center the container horizontally */
-        }
-      </style>
 </head>
 
 <body>
@@ -22,9 +16,12 @@
 
     <p>To start, let's take a look at the distribution of beer styles and the number of reviews each beer has received.</p>
     
-    <iframe src="/assets/figures/top10_beer_style.html" width="825" height="625" frameborder="0"></iframe>
-    
-    <iframe src="/assets/figures/beer_nbr_reviews.html" width="825" height="625" frameborder="0"></iframe>
+  
+    <div style="display: flex; justify-content: center;">
+      <iframe src="/assets/figures/top10_beer_style.html" width="525" height="325" frameborder="0"></iframe>
+      <iframe src="/assets/figures/beer_nbr_reviews.html" width="525" height="325" frameborder="0"></iframe>
+    </div>
+
 
     <p>The first image unveils the top 10 most common beer styles, providing insights into the variety within our dataset. The second image presents a histogram, showcasing the distribution of reviews per beer in a logarithmic scale.</p>
 
