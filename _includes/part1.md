@@ -1,7 +1,3 @@
----
-title: Bottles, Cans, or Drafts
-subtitle: Pouring Over the Data to Decode the Perfect Sip
----
 
 ## Unveiling the Data
 <b> Beer Styles and Reviews </b>

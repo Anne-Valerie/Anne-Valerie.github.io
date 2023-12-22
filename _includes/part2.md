@@ -1,8 +1,3 @@
----
-title: Bottles, Cans, or Drafts
-subtitle: Pouring Over the Data to Decode the Perfect Sip
----
-
 ## Part 2: Serving Style Extraction
 
 In our exploration of 250 hand-checked beer reviews, we set out to uncover the mysteries of serving types. We kicked things off with the simple Naïve method, choosing a serving type when the answer was obvious. However, as the reviews got more complex, we tried the fancier Similarity method, using calculations to compare review text with potential serving types.
