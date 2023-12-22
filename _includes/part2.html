@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
 
 <body>
 
-    <h2>Part 2: Serving Style Extraction</h2>
+    <h2>Serving Style Extraction</h2>
 
     <p>In our exploration of 250 hand-checked beer reviews, we set out to uncover the mysteries of serving types. We kicked things off with the simple Naïve method, choosing a serving type when the answer was obvious. However, as the reviews got more complex, we tried the fancier Similarity method, using calculations to compare review text with potential serving types.</p>
 
@@ -21,44 +22,19 @@
 
     <p>All these methods were applied by examining the 250 hand reviews and were modified to maximize accuracy. The journey from the simple Naïve method to the more refined Tense-based method underscores the complexities involved in recognizing serving types in reviews. Cheers to the adventure! 🍻</p>
 
-    <h3>Naive Approach</h3>
+    <table>
+        <thead>
+        <tr><th>Rule             </th><th style="text-align: right;">  Accuracy in %</th><th style="text-align: right;">  Unknown in %</th><th style="text-align: right;">  bottle in %</th><th style="text-align: right;">  can in %</th><th style="text-align: right;">  draft in%</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>Naïve            </td><td style="text-align: right;">           75.6</td><td style="text-align: right;">          42.2</td><td style="text-align: right;">        22.25</td><td style="text-align: right;">      23.5</td><td style="text-align: right;">       12  </td></tr>
+        <tr><td>Similarity       </td><td style="text-align: right;">           64  </td><td style="text-align: right;">          93.7</td><td style="text-align: right;">         2.5 </td><td style="text-align: right;">       0.8</td><td style="text-align: right;">        3.1</td></tr>
+        <tr><td>Rule-based       </td><td style="text-align: right;">           94.4</td><td style="text-align: right;">          59.6</td><td style="text-align: right;">        29.1 </td><td style="text-align: right;">       2.1</td><td style="text-align: right;">        9.3</td></tr>
+        <tr><td>Rule-based+ Tense</td><td style="text-align: right;">           94  </td><td style="text-align: right;">          55.6</td><td style="text-align: right;">        31.5 </td><td style="text-align: right;">       2.5</td><td style="text-align: right;">       10.4</td></tr>
+        </tbody>
+        </table>
 
-    <h4>Results</h4>
-
-    <hr>
-
-    <h3>Similarity Approach</h3>
-
-    <h4>Results</h4>
-
-    <hr>
-
-    <h3>Rule-Based Approach</h3>
-
-    <h4>Results</h4>
-
-    <hr>
-
-    <h3>Tense-Based Approach</h3>
-
-    <ul>
-        <li>Analyzing 'can' to differentiate the verb and the noun (I labeled the cans that were nouns).</li>
-        <li>Analyzing the verbs before each serving type.</li>
-        <li>If the verb before the serving type is a modal word, don't keep it.</li>
-        <li>For the verbs that precede the serving type in the past and present:
-            <ul>
-                <li>Case 1: More than one verb in the past, keep the first.</li>
-                <li>Case 2: One (or more) verb in the past and one (or more) in the present, keep the first verb in the past.</li>
-            </ul>
-        </li>
-        <li>For the verbs that precede the serving type only in the present:
-            <ul>
-                <li>Case 1: More than one serving type in the list, unknown.</li>
-                <li>Case 2: Only one serving type in the list, keep the unique serving type.</li>
-            </ul>
-        </li>
-    </ul>
-
+    
     <h4>Results</h4>
 
     <ul>
