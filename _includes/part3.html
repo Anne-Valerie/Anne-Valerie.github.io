@@ -2,31 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analysis Sections</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <title>Data Visualizations</title>
 </head>
 
 <body>
 
-    <h3>How About the Emotions Beers Evoke?</h3>
-    <hr>
+  <h1>Visualisations</h1>
 
-    <h3>Which Countries Are the Most Beer-Friendly?</h3>
-    <hr>
+  <p>We then did some more data exploration to better visualize the data and try to find some explanatory patterns. Mainly, we wanted to look at our final data set, after all the filtering, deletions and enrichment.</p>
 
-    <h3>Which Beers Are the Most User-Friendly?</h3>
-    <ul>
-        <li>Grouping all beer styles into broader categories (Ales, Stouts, Lagers, Strong Ales, Wheat Beers, Specialty and Unique Beers, Seasonal and Celebration Beers, Sour Beers, and Historical and Traditional Beers).</li>
-        <li>Counting the number of beers in each category. This was done to address the imbalance in category sizes (e.g., there are 30 ales in our dataset but only 8 stouts).</li>
-        <li>Counting the number of reviews per category.</li>
-        <li>Calculating the average number of reviews per category (number of reviews divided by the number of beers in the given category). This analysis was conducted to further understand the imbalance in category sizes.</li>
-        <li>Counting the number of reviewers per category.</li>
-        <li>Calculating the average number of reviewers per category (number of reviews divided by the number of beers in the given category). This was also performed to address the imbalance in category sizes.</li>
-        <li>Counting the number of reviews from each region for every category separately. The purpose of this step was to determine which countries consume or review specific types of beers the most. At this stage, it is not possible to ascertain preferences for specific beers in different regions but rather to identify which ones are consumed or reviewed more frequently.</li>
-    </ul>
-    <hr>
+  <h2>Temporal analysis</h2>
+
+  <p>We start by looking at patterns in time:</p>
+
+  <div id="plot-year-by-year"></div>
+  <script src="plotly-scripts.js"></script>
+
+  <p>As we can observe, the website's popularity has kept growing until 2011, but has decreased ever since. This is probably due to the competition introduced by smartphone apps!</p>
+
+  <div id="plot-months"></div>
+  <script src="plotly-scripts.js"></script>
+
+  <p>We also observe that people review more beers in December than any other month...winter solitude or just tasting recent gifts?</p>
+
+  <h2>Geographical analysis</h2>
+
+  <p>After extracting and enriching our data with the serving styles, we also wanted to understand how people drink their beer worldwide, or rather, what they drink it from.</p>
+
+  <div id="plot-distrib-regions-horizontal"></div>
+  <script src="plotly-scripts.js"></script>
+
+  <p>It seems that there are quite a few differences! Micronesia and Sub-Saharan Africa appear to almost only drink from bottles, while Melanesia likes cans. Apart from these regions, all the others seem to follow the distribution that we modeled before.</p>
 
 </body>
 
 </html>
+
