@@ -11,19 +11,53 @@
 <body>
 
     <p>Once we were confident with the extracted serving styles, it was time to analyze and try to answer our initial question! First, we looked at the distribution of the grades for each aspect of the tasting palette: aroma, palate, taste, appearance, and overall grade, for each serving style.</p>
+    <iframe src="/assets/figures/BA_04_serving_style_hist.html" width="825" height="625" frameborder="0"></iframe>
+    
+    <p> We see the distribution are different, but in summary, what is better ?  </p>
+    <iframe src="/assets/figures/beer_ratings_by_serving_style.html" width="825" height="625" frameborder="0"></iframe>
+    <p>From the boxplots, we see that indeed the ratings are different between the serving styles! As expected, people prefer draft beers, and then bottles, and finally cans. Can still seem to suffer from the bad reputation of the 70s, when they were associated with cheap beers.</p>
 
+    <p> What about the other aspects ? Regarding the appearance of the beer, people really don't like cans! Is it because they don't see the beer, or because the beer is not as good ? Regarding the aroma, palate and taste, the ratings are even more different between the serving styles! </p>
     <iframe src="/assets/figures/radar_plot_aspect_serving.html" width="825" height="625" frameborder="0"></iframe>
-    <iframe src="/assets/figures/histogram_plot.html" width="825" height="625" frameborder="0"></iframe>
+    
+    <p>We threw our data into the statistical boxing ring, armed with t-tests, hoping to unveil the undisputed champions of beer ratings based on serving styles. 
+        Ding, ding, ding! The p-values came out swinging, all below 0.05, indicating a statistically significant difference in scores. 
+        But wait, our dataset had a bit of a size mismatch – lots of bottles, a fair number of drafts, and just a few cans. 
+        It was like comparing heavyweights to featherweights, so our new friend Kruskal-Wallis test stepped in to level the playing field. 
+        The p-values were still below 0.05, so we can conclude that the difference in ratings is not due to the serving style!</p>
 
-    <p>We did this using a t-test, which yielded each time a p-value lower than 0.05, suggesting that there was a statistically significant difference in these scores, based on the serving style. Then, we realized that the number of samples was very uneven between the serving styles (lots of bottles, a moderate number of draft, and a few cans), so we needed to find a test that was insensitive to the sample size when comparing distributions: the Kruskal-Wallis test. This also yielded p-values very close to 0, suggesting once again that the distributions were different. But where does the difference come from? Because we cannot affirm that we have not neglected some common confounders such as the beer group or some region of the world.</p>
+        <iframe src="/assets/figures/comparison_of_aspects.html" width="825" height="625" frameborder="0"></iframe>
 
-    <iframe src="/assets/figures/BA_04_ttest.html" width="825" height="625" frameborder="0"></iframe>
+        <p>Hold your beer! We couldn't let the confounding suspects go unchecked. What about the beer style, the alcohol by volume, or the brewery? 
+            Time to play detective. We initiated a turn-around by filtering our data to examine beers served in all three styles – bottles, cans, and drafts.</p>
 
-    <p>Therefore, we started by filtering our data once more, to evaluate beers that had at least 7 reviews in each serving style, to control for that variable. But the results were very similar, the p-values yielded by the Kruskal-Wallis test are still way below 0.05. This means that the difference in the ratings <strong>does not come from the serving style!</strong></p>
-
-    <iframe src="/assets/figures/comparison_of_aspects.html" width="825" height="625" frameborder="0"></iframe>
+        <p>We used beers that had at least 7 reviews in each beer style. 
+            The number 7 made sure the amount of reviews was significant but still enough different beers were detected.</p>
+        
+        <p>The results unveiled a revelation – the difference in ratings isn't from serving style! 
+            It's only about the beer style, alcohol by volume, or the brewery. The serving style left center stage.</p>
+        
+        <p>But wait, there's more! Could it be a tag team effort? Does the beer style and serving style influence the rating in tandem, for different beers? 
+            Time to go back to our initial dataset and unleash the ANOVA test! 
+            With the dramatic flair of statistical revelations, we found that indeed, the ratings danced to the tune of beer groups.</p>
+        
+        <p>So, is it a harmonious blend of beer style and serving style, or are they dueling for the spotlight? 
+            The plot thickens, and our journey through the world of beer ratings continues! To check this, we will use a ordinary least square (OLS) regression model !</p>
         
     <iframe src="/assets/figures/bar_plot_beer_group.html" width="825" height="625" frameborder="0"></iframe>
+    
+        <p>This plot is like a treasure map to flavor-town! Hold onto your beer mugs; we're diving into the fascinating world of beer preferences. Draft takes the crown, but hey, not always! Ales steal the spotlight, ranging from pale ales to rich brown ales, delivering a symphony of flavors. Are they too complex for the serving style taste buds to decipher? The plot thickens!</p>
+
+        <p>But wait, Lagers, the unsung heroes or maybe the rebels? They're the light, crisp, and refreshing daredevils, designed for swift sipping, not for lingering enjoyment. It's a crisp finish but a swift exit. Sorry, Lagers, we love you, but not everyone is on board.</p>
+        
+        <p>Now, enter the silky, smooth superheroes – Stouts! Creamy textures that transcend serving styles, earning applause across the beer spectrum. It's a unanimous win for the velvety goodness.</p>
+        
+        <p>And here's the plot twist – sour beers! Drumroll, please. Bottles steal the limelight. Is it the quirky fermentation process or a secret pact between sour beers and bottles? We'll let you decide.</p>
+        
+        <p>Buckle up, beer enthusiasts! The flavor journey continues, and we're just getting started!</p>
+
+
+    
 
 </body>
 
