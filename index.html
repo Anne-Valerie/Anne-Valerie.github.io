@@ -19,75 +19,74 @@ cover-img:
     }
 
     .btn:hover {
-  background: #eee;
-}
+      background: #eee;
+    }
+    </style>
+</head>
 
-/* <body>
+<body>
 
     <h1>Bottles, Cans, or Drafts</h1>
     <p class="subtitle">Pouring Over the Data to Decode the Perfect Sip</p>
 
     <!-- Rest of your HTML content -->
 
-</body> */
+    <hr>
+    <p><b>Table of contents</b></p>
+    <hr>
 
-{% include head.html %}
+    <div class="btn-container">
+      <a href="#First_Point_Header" class="btn Introduction"><b> Introduction</b></a>
+    </div>
 
-<hr>
-<p><b>Table of contents</b></p>
-<hr>
+    <div class="btn-container">
+      <a href="#Part_1" class="btn Part1"><b>Part 1: Unveiling the Data</b></a>
+    </div>
 
-<div class="btn-container">
-  <a href="#First_Point_Header" class="btn Introduction"><b> Introduction</b></a>
-</div>
+    <div class="btn-container">
+      <a href="#Part_2" class="btn Part2"><b>Part 2: Serving style extraction</b></a>
+    </div>
 
-<div class="btn-container">
-  <a href="#Part_1" class="btn Part1"><b>Part 1: Unveiling the Data</b></a>
-</div>
+    <div class="btn-container">
+      <a href="#Part_3" class="btn Part3"><b>Part 3: Into the depth of beers</b></a>
+    </div>
 
-<div class="btn-container">
-  <a href="#Part_2" class="btn Part2"><b>Part 2: Serving style extraction</b></a>
-</div>
+    <div class="btn-container">
+      <a href="#Part_4" class="btn Part4"><b>Part 4: Statistical Analysis</b></a>
+    </div>
 
-<div class="btn-container">
-  <a href="#Part_3" class="btn Part3"><b>Part 3: Into the depth of beers</b></a>
-</div>
+    <div class="btn-container">
+      <a href="#Part_5" class="btn Part5"><b>Part 5: Regional Analysis</b></a>
+    </div>
 
-<div class="btn-container">
-  <a href="#Part_4" class="btn Part4"><b>Part 4: Statistical Analysis</b></a>
-</div>
+    <div class="btn-container">
+      <a href="#Conclusion" class="btn Conclusion"><b>Conclusion</b></a>
+    </div>
 
-<div class="btn-container">
-  <a href="#Part_5" class="btn Part5"><b>Part 5: Regional Analysis</b></a>
-</div>
+    <hr>
 
-<div class="btn-container">
-  <a href="#Conclusion" class="btn Conclusion"><b>Conclusion</b></a>
-</div>
+    <body id="page-top" class="index">
 
-<hr>
+        <h2 id="First_Point_Header">Introduction</h2>
+        {% include intro.html %}
 
-<body id="page-top" class="index">
+        <h2 id="Part_1">Part 1: Unveiling the Data</h2>
+        {% include part1.html %}
 
-  <h2 id="First_Point_Header">Introduction</h2>
-  {% include intro.html %}
+        <h2 id="Part_2">Part 2: Serving style extraction</h2>
+        {% include part2.html %}
 
-  <h2 id="Part_1">Part 1: Unveiling the Data</h2>
-  {% include part1.html %}
-  
-  <h2 id="Part_2">Part 2: Serving style extraction</h2>
-  {% include part2.html %}
+        <h2 id="Part_3">Part 3: Into the depth of beers </h2>
+        {% include part3.html %}
 
-  <h2 id="Part_3">Part 3: Into the depth of beers </h2>
-  {% include part3.html %}
+        <h2 id="Part_4">Part 4: Statistical Analysis</h2>
+        {% include part4.html %}
 
-  <h2 id="Part_4">Part 4: Statistical Analysis</h2>
-  {% include part4.html %}
+        <h2 id="Part_5">Part 5: Regional Analysis</h2>
+        {% include part5.html %}
 
-  <h2 id="Part_4">Part 5: Regional Analysis</h2>
-  {% include part5.html %}
+        <h2 id="Conclusion">Conclusion</h2>
+        {% include conclusion.html %}
 
-  <h2 id="Conclusion">Conclusion</h2>
-  {% include conclusion.html %}
-
+    </body>
 </body>
