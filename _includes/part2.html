@@ -9,26 +9,104 @@
 </head>
 
 <body>
+    <p>The first step of our exploration to retrieve the serving style, was to look at the reviwes. Do user really specify a specific serving ? How do they phrase it? </p>
+    <p> To get a first intuition of this, we labelled by hand 250 reviews. More than discovering quirky reviews, we realised that unfortunately not all reviews present a serving style. </p>
 
-    <p>In our exploration of 250 hand-checked beer reviews, we set out to uncover the mysteries of serving types. We kicked things off with the simple Naïve method, choosing a serving type when the answer was obvious. However, as the reviews got more complex, we tried the fancier Similarity method, using calculations to compare review text with potential serving types.</p>
+    <p>In our exploration of 250 hand-checked beer reviews, we set out to uncover the mysteries of serving types. 
+        We could not label all reviews by hand! We needed to come with an awesome technique to get the label - when there was any. </p>
+    <p>We kicked things off with the simple naïve method, choosing a serving type when the answer was obvious, i.e. the word "bottle", "can" or "draft" was found. But... What about when multiple serving types were mentioned? What about when the serving type was mentionned differently, using slang? </p>
 
-    <p>Despite our efforts to enhance accuracy, the straightforward Naïve method proved to be more effective overall. The accuracy decreased, and the number of reviews categorized as unknown increased. Subsequently, we decided not to pursue the Similarity method further and continued refining the Naïve method. We acknowledged its limitations, especially when dealing with ambiguous statements like the one found in some reviews: "I actually found this more elegant and less bruising than expected. Stone can still surprise," where the word "can" functioned as a verb, not a serving type, but our algorithm mistakenly considered it one.</p>
+    <p> As the reviews got more complex, we tried the fancier similarity method, using NLP calculations to compare review text with potential serving types. To do this, we first came with a list of different words which could be assimilated to different serving style.</p>
 
-    <p>To address such challenges, we introduced a Rule-based method. This involved differentiating between the verb 'can' and the noun 'can' in the reviews and excluding serving types if certain verbs ("would," "could," "'d," "will") were present. For instance, in sentences like "and I will certainly be keeping an eye out for a bottle," the serving type 'bottle' wouldn't be considered because the user had not yet consumed from a bottle. Despite these efforts, challenges persisted, leading us to refine our approach further with a Tense-based method.</p>
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Bottle</th>
+            <th>Can</th>
+            <th>Draft</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>bottle</td>
+            <td>can</td>
+            <td>tap</td>
+          </tr>
+          <tr>
+            <td>bottled</td>
+            <td>canned</td>
+            <td>on-tap</td>
+          </tr>
+          <tr>
+            <td>corked</td>
+            <td>tin</td>
+            <td>draught</td>
+          </tr>
+          <tr>
+            <td>capped</td>
+            <td>aluminum</td>
+            <td>draft</td>
+          </tr>
+          <tr>
+            <td>sealed</td>
+            <td>canister</td>
+            <td>tapped</td>
+          </tr>
+          <tr>
+            <td>brown</td>
+            <td>canned</td>
+            <td>pint</td>
+          </tr>
+          <tr>
+            <td>clear</td>
+            <td>crushable</td>
+            <td>pour</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>ring</td>
+            <td>keg</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>metal</td>
+            <td>barrel</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>cask</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>untapped</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>hand-Pulled</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <p>In the Tense-based method, we focused solely on the unknown reviews identified in the Rule-based analysis. The method involved analyzing the different tenses of the verbs before the serving type. When a verb in the past was found, the serving type was taken. However, if the verbs were all in the present, the serving was considered unknown. This allowed us to decrease the amount of unknown by 4%, giving us 100,000 more data while keeping the accuracy around 94%.</p>
+    <p>Despite our efforts to enhance accuracy, the straightforward naïve method proved to be more effective overall. The accuracy decreased, and the number of reviews categorized as unknown increased. Subsequently, we decided not to pursue the similarity method further and continued refining the naïve method. We acknowledged its limitations, especially when dealing with ambiguous statements like the one found in some reviews: "I actually found this more elegant and less bruising than expected. Stone can still surprise," where the word "can" functioned as a verb, not a serving type, but our algorithm mistakenly considered it one.</p>
 
-    <p>All these methods were applied by examining the 250 hand reviews and were modified to maximize accuracy. The journey from the simple Naïve method to the more refined Tense-based method underscores the complexities involved in recognizing serving types in reviews. Cheers to the adventure! 🍻</p>
+    <p>To address such challenges, we introduced a rule-based method. This involved differentiating between the verb 'can' and the noun 'can' in the reviews and excluding serving types if certain verbs ("would," "could," "'d," "will") were present. For instance, in sentences like "and I will certainly be keeping an eye out for a bottle," the serving type 'bottle' wouldn't be considered because the user had not yet consumed from a bottle. Despite these efforts, challenges persisted, leading us to refine our approach further with a tense-based method.</p>
+
+    <p>In the Tense-based method, we focused solely on the unknown reviews identified in the rule-based analysis. The method involved analyzing the different tenses of the verbs before the serving type. When a verb in the past was found, the serving type was taken. However, if the verbs were all in the present, the serving was considered unknown. This allowed us to decrease the amount of unknown by 4%, giving us 100,000 more data while keeping the accuracy around 94%.</p>
+
+    <p>All these methods were applied by examining the 250 hand reviews and were modified to maximize accuracy. The journey from the simple naïve method to the more refined tense-based method underscores the complexities involved in recognizing serving types in reviews. Cheers to the adventure! 🍻</p>
 
     <table>
         <thead>
         <tr><th>Rule             </th><th style="text-align: right;">Accuracy</th><th style="text-align: right;">Unknown </th><th style="text-align: right;">bottle</th><th style="text-align: right;">can</th><th style="text-align: right;">draft</th></tr>
         </thead>
         <tbody>
-        <tr><td>Naïve            </td><td style="text-align: right;">           75.6%</td><td style="text-align: right;">          42.2%</td><td style="text-align: right;">        22.25%</td><td style="text-align: right;">      23.5%</td><td style="text-align: right;">       12%  </td></tr>
-        <tr><td>Similarity       </td><td style="text-align: right;">           64%  </td><td style="text-align: right;">          93.7%</td><td style="text-align: right;">         2.5%</td><td style="text-align: right;">       0.8%</td><td style="text-align: right;">        3.1%</td></tr>
-        <tr><td>Rule-based       </td><td style="text-align: right;">           94.4%</td><td style="text-align: right;">          59.6%</td><td style="text-align: right;">        29.1% </td><td style="text-align: right;">       2.1%</td><td style="text-align: right;">        9.3%</td></tr>
-        <tr><td>Rule-based + Tense</td><td style="text-align: right;">           94%  </td><td style="text-align: right;">          55.6%</td><td style="text-align: right;">        31.5% </td><td style="text-align: right;">       2.5%</td><td style="text-align: right;">       10.4%</td></tr>
+        <tr><td>naïve            </td><td style="text-align: right;">           75.6%</td><td style="text-align: right;">          42.2%</td><td style="text-align: right;">        22.25%</td><td style="text-align: right;">      23.5%</td><td style="text-align: right;">       12%  </td></tr>
+        <tr><td>similarity       </td><td style="text-align: right;">           64%  </td><td style="text-align: right;">          93.7%</td><td style="text-align: right;">         2.5%</td><td style="text-align: right;">       0.8%</td><td style="text-align: right;">        3.1%</td></tr>
+        <tr><td>rule-based       </td><td style="text-align: right;">           94.4%</td><td style="text-align: right;">          59.6%</td><td style="text-align: right;">        29.1% </td><td style="text-align: right;">       2.1%</td><td style="text-align: right;">        9.3%</td></tr>
+        <tr><td>rule-based + tense</td><td style="text-align: right;">           94%  </td><td style="text-align: right;">          55.6%</td><td style="text-align: right;">        31.5% </td><td style="text-align: right;">       2.5%</td><td style="text-align: right;">       10.4%</td></tr>
         </tbody>
         </table>
 
