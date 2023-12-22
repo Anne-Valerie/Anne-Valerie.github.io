@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Unveiling the Data</title> 
+   
+    <style>
+        .iframe-container {
+            display: flex;
+        }
+
+        .iframe-container iframe {
+            margin-right: 1px; /* Adjust the margin as needed */
+        }
+    </style>
 </head>
 
 <body>
@@ -14,9 +24,15 @@
     <b>Beer Styles and Reviews</b>
 
     <p>To start, let's take a look at the distribution of beer styles and the number of reviews each beer has received.</p>
+    
+    
+    <div class="iframe-container">
+        <iframe src="/assets/figures/top10_beer_style.html" width="825" height="425" frameborder="0"></iframe>
+        <iframe src="/assets/figures/beer_nbr_reviews.html" width="825" height="425" frameborder="0"></iframe>
+    </div>
 
-    <iframe src="/assets/figures/top10_beer_style.html" width="825" height="625" frameborder="0"></iframe>
-    <iframe src="/assets/figures/beer_nbr_reviews.html" width="825" height="625" frameborder="0"></iframe>
+
+
 
     <p>The first image unveils the top 10 most common beer styles, providing insights into the variety within our dataset. The second image presents a histogram, showcasing the distribution of reviews per beer in a logarithmic scale.</p>
 
@@ -24,8 +40,8 @@
 
     <p>Moving on, let's explore the brewery landscape and the most prevalent brewery locations.</p>
 
-    <iframe src="/assets/figures/brewery_nbr_beers.html" width="825" height="625" frameborder="0"></iframe>
-    <iframe src="/assets/figures/top10_brewery_location.html" width="825" height="625" frameborder="0"></iframe>
+    <iframe src="/assets/figures/brewery_nbr_beers.html" width="625" height="425" frameborder="0"></iframe>
+    <iframe src="/assets/figures/top10_brewery_location.html" width="625" height="425" frameborder="0"></iframe>
 
     <p>Here, we delve into the brewery landscape, examining the distribution of beers per brewery and the top 10 locations where breweries thrive.</p>
 
@@ -33,8 +49,8 @@
 
     <p>Our exploration wouldn't be complete without understanding the users behind the reviews. Let's unravel the story of reviews per user and the most common user locations.</p>
 
-    <iframe src="/assets/figures/user_nbr_reviews.html" width="825" height="625" frameborder="0"></iframe>
-    <iframe src="/assets/figures/top10_user_location.html" width="825" height="625" frameborder="0"></iframe>
+    <iframe src="/assets/figures/user_nbr_reviews.html" width="625" height="425" frameborder="0"></iframe>
+    <iframe src="/assets/figures/top10_user_location.html" width="625" height="425" frameborder="0"></iframe>
 
     <p>In these images, we unveil the distribution of reviews per user and uncover the top 10 locations where our users hail from. Let the exploration continue!</p>
 
