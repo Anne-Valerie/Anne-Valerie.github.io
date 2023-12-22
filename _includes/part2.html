@@ -18,7 +18,7 @@
 
     <p>To address such challenges, we introduced a Rule-based method. This involved differentiating between the verb 'can' and the noun 'can' in the reviews and excluding serving types if certain verbs ("would," "could," "'d," "will") were present. For instance, in sentences like "and I will certainly be keeping an eye out for a bottle," the serving type 'bottle' wouldn't be considered because the user had not yet consumed from a bottle. Despite these efforts, challenges persisted, leading us to refine our approach further with a Tense-based method.</p>
 
-    <p>In the Tense-based method, we focused solely on the unknown reviews identified in the Rule-based analysis. The method involved analyzing the different tenses of the verbs before the serving type. When a verb in the past was found, the serving type was taken. However, if the verbs were all in the present, the serving was considered unknown.</p>
+    <p>In the Tense-based method, we focused solely on the unknown reviews identified in the Rule-based analysis. The method involved analyzing the different tenses of the verbs before the serving type. When a verb in the past was found, the serving type was taken. However, if the verbs were all in the present, the serving was considered unknown. This allowed us to decrease the amount of unknown by 4%, giving us 100,000 more data while keeping the accuracy around 94%.</p>
 
     <p>All these methods were applied by examining the 250 hand reviews and were modified to maximize accuracy. The journey from the simple Naïve method to the more refined Tense-based method underscores the complexities involved in recognizing serving types in reviews. Cheers to the adventure! 🍻</p>
 
