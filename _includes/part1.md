@@ -1,3 +1,7 @@
+---
+layout: home
+title: Unveiling the Data
+---
 
 ## Unveiling the Data
 <b> Beer Styles and Reviews </b>
