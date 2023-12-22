@@ -1,5 +1,114 @@
 ---
 layout: home
-title: My website
-subtitle: This is where I will tell my friends way too much about me
+title: Bottles, Cans, or Drafts
+subtitle: Pouring Over the Data to Decode the Perfect Sip
+cover-img:
+  - "/assets/img/home.jpg"
 ---
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .btn {
+      border: none;
+      background-color: white;
+      font-size: 30px;
+      color: #383838;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn:hover {
+  background: #eee;
+}
+  
+.btn.Introduction {
+  font-size: 18px;
+  font-family: 'Lora', serif;
+}
+.btn.Part1 {
+font-size: 18px;
+font-family: 'Lora', serif;
+}
+.btn.Part2 {
+  font-size: 18px;
+  font-family: 'Lora', serif;
+}
+.btn.Part3 {
+  font-size: 18px;
+  font-family: 'Lora', serif;
+}
+.btn.Part4 {
+  font-size: 18px;
+  font-family: 'Lora', serif;
+}
+.btn.Conclusion {
+  font-size: 18px;
+  font-family: 'Lora', serif;
+}
+.btn.Ethical {
+font-size: 18px;
+font-family: 'Lora', serif;
+}
+
+</style>
+</head>
+
+{% include head.html %}
+
+<hr>
+<p><b>Table of contents</b></p>
+<hr>
+
+<div class="btn-container">
+  <a href="#First_Point_Header" class="btn Introduction"><b> Introduction</b></a>
+</div>
+
+<div class="btn-container">
+  <a href="#Part_1" class="btn Part1"><b>Part 1: Quantifying gender inequalities</b></a>
+</div>
+
+<div class="btn-container">
+  <a href="#Part_2" class="btn Part2"><b>Part 2: Gender roles in movies</b></a>
+</div>
+
+<div class="btn-container">
+  <a href="#Part_3" class="btn Part3"><b>Part 3: Public perception of gendered movies</b></a>
+</div>
+
+<div class="btn-container">
+  <a href="#Part_4" class="btn Part4"><b>Part 4: Inequalities around the world</b></a>
+</div>
+
+<div class="btn-container">
+  <a href="#Conclusion" class="btn Conclusion"><b>Conclusion</b></a>
+</div>
+
+<div class="btn-container">
+  <a href="#Ethical" class="btn Ethical"><b>Ethical Risk Assessment</b></a>
+</div>
+<hr>
+
+<body id="page-top" class="index">
+
+  <h2 id="First_Point_Header">Introduction</h2>
+  {% include datastory.md %}
+
+  <!-- <h2 id="Part_1">Part 1: Quantifying gender inequalities</h2>
+  {% include part1.html %}
+  
+  <h2 id="Part_2">Part 2: Unveiling the Data</h2>
+  {% include part2. %}
+
+  <h2 id="Part_3">Part 3: Public perception of gendered movies</h2>
+  {% include part3.html %}
+
+  <h2 id="Part_4">Part 4: Inequalities around the world</h2>
+  {% include part4.html %}
+
+  <h2 id="Conclusion">Conclusion</h2>
+  {% include conclusion.html %}
+
+  <h2 id="Ethical">Ethical Risk Assessment</h2>
+  {% include ethical.html %} -->
+
+</body>
