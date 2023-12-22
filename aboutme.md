@@ -1,16 +1,15 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About the team
+subtitle: And their favorite beers
 ---
+Hey ! Meet the awesome team behind this project !
 
-My name is Anne-Valérie Preto. I have the following qualities:
 
-
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+| People            | Favourite Beer  | Contact                      |
+|-------------------|-----------------|------------------------------|
+| Tristan Carruzzo  | beer1           | tristan.carruzzo@epfl.ch     |
+| Victor Dubien     | [Beer]          | victor.dubien@epfl.ch        |
+| Agatha Hunter     | [Beer]          | agatha.hunter@epfl.ch        |
+| Thamin Maurer     | [Beer]          | thamin.maurer@epfl.ch        |
+| Anne-Valérie Preto| [Beer]          | anne-valerie.preto@epfl.ch   |
