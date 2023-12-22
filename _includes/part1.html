@@ -12,6 +12,11 @@
 <body>
 
     <!-- <h2>Unveiling the Data</h2> -->
+    <p>Our dataset is drawn from "Beer Advocate" (https://www.beeradvocate.com/), a platform where beer aficionados share reviews. 
+        Users assess beers across aspects like aroma, taste, appearance, palate, and assign an overall grade. 
+        The dataset also includes key beer details—alcohol by volume, beer style, brewery, and its location. 
+        User information is limited to usernames and locations.</p>
+
     <b>Beer Styles and Reviews</b>
 
     <p>To start, let's take a look at the distribution of beer styles and the number of reviews each beer has received.</p>
@@ -21,7 +26,7 @@
     <iframe src="/assets/figures/beer_nbr_reviews.html" width="825" height="625" frameborder="0"></iframe>
 
     <p>The first image unveils the top 10 most common beer styles, providing insights into the variety within our dataset. The second image presents a histogram, showcasing the distribution of reviews per beer in a logarithmic scale.</p>
-
+    <p> It's interesting to notice how common american beer are in this dataset.</p>
     <b>Breweries and Locations</b>
 
     <p>Moving on, let's explore the brewery landscape and the most prevalent brewery locations.</p>
@@ -30,6 +35,10 @@
     <iframe src="/assets/figures/top10_brewery_location.html" width="825" height="625" frameborder="0"></iframe>
 
     <p>Here, we delve into the brewery landscape, examining the distribution of beers per brewery and the top 10 locations where breweries thrive.</p>
+    <p> Unsurprisingly, Germany, renowned worldwide for its beer, emerges as the predominant brewery location.
+         The United States of America takes the lead with an abundance of brewery locations, particularly when considering all states collectively.
+          This observation suggests that Beer Advocate is predominantly utilized within the United States.</p>
+
 
     <b>User Reviews and Locations</b>
 
@@ -38,15 +47,19 @@
     <iframe src="/assets/figures/user_nbr_reviews.html" width="825" height="625" frameborder="0"></iframe>
     <iframe src="/assets/figures/top10_user_location.html" width="825" height="625" frameborder="0"></iframe>
 
-    <p>In these images, we unveil the distribution of reviews per user and uncover the top 10 locations where our users hail from. Let the exploration continue!</p>
+    <p>In these images, we unveil the distribution of reviews per user and uncover the top 10 locations where our users hail from. </p>
+    <p> Confirming our earlier assumption, this plot indicates that the site hasn't significantly transcended the borders of the United States. 
+        While users from around the world contribute, Americans constitute the predominant user base. Let the exploration continue!</p>
 
     <b>Separation of Beer Types into More General Groups</b>
 
-    <p>These groupings provide us with a more generalized view of beer styles, setting the stage for uncovering hidden patterns within each category. Let's proceed with our intriguing exploration!</p>
+    <p>In order to analyse our dataset, we thought of grouping similar beers together. These groupings provide us with a more generalized view of beer styles, setting the stage for uncovering hidden patterns within each category. 
+        The categories can be explored here below - Please enjoy the interactive plot!-  Let's proceed with our intriguing exploration!</p>
 
     <iframe src="/assets/figures/beer_groups_styles.html" width="825" height="625" frameborder="0"></iframe>
 
-    <p>But wait, we've got a missing ingredient – the serving style!</p>
+    <p>But wait, we've got a missing ingredient in our analysis – the serving style!</p>
+    <p> Indeed, the serving style is not given in our dataset. So... how do we continue ?</p>
 
 </body>
 
