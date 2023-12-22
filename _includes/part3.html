@@ -9,22 +9,66 @@
 </head>
 
 <body>
+  <p>We embarked on a data exploration journey, uncovering hidden gems in our final dataset. Think of it as sifting through the beer-filled sands to find the real treasures – those data patterns!</p>
 
-  <h1>Visualisations</h1>
+  <h2>Temporal Analysis</h2>
 
-  <p>We then did some more data exploration to better visualize the data and try to find some explanatory patterns. Mainly, we wanted to look at our final data set, after all the filtering, deletions and enrichment.</p>
+  <p>Our journey through time revealed interesting patterns:</p>
+
+  <iframe src="/assets/figures/number_reviews_year.html" width="525" height="325" frameborder="0"></iframe>
+
+  <p>Website popularity soared until 2011, but then? A dip. Probably the rise of smartphone apps – the new sheriffs in town!</p>
+
+  <iframe src="/assets/figures/percentage_reviews_month.html" width="525" height="325" frameborder="0"></iframe>
+
+  <p>December, a month of beer reviews. Winter solitude or just sipping on gifts? The mystery remains.</p>
+
+  <h2>Geographical Analysis</h2>
+
+  <p>Let's globetrot! After enriching our data with serving styles, we delved into global beer habits – or rather, what people sip their brews from.</p>
+
+  <img src="/assets/figures/serving_type_world_region.png" alt="Serving style distribution per region">
+
+  <p>Regions show their style! Micronesia and Sub-Saharan Africa prefer bottles, while Melanesia leans towards cans. Rest of the world? They dance to the beat we predicted earlier.</p>
+
+  <h2>Categories of Group Analysis</h2>
+
+  <p>Enter the beer group mystery! How do different styles cozy up to serving styles? We grouped styles, seeking the patterns.</p>
+  
+  <img src="/assets/figures/serving_type_beer_group.png" alt="Serving style distribution per beer group">
+  <p>Here's a sneak peek into the beer landscape. Bottles are the regulars – no surprises. Cans? They fancy hanging out with Lagers. The misconception that canned means cheap? Lagers seem to be caught up in that story. No fuss, no frills – just the real beer deal. Cheers to clarity through the haze! 🍻 </p>
+
+  </p>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <title>Data Visualizations</title>
+</head>
+
+<body>
+
+
+  <p>We then did some more data exploration to better visualize the data and try to find some explanatory patterns. Mainly, we wanted to look at our final data set, after all the filtering, deletions and enrichment of the serving style.</p>
 
   <h2>Temporal analysis</h2>
 
   <p>We start by looking at patterns in time:</p>
 
-  <div id="plot-year-by-year"></div>
-  <script src="plotly-scripts.js"></script>
+  <iframe src="/assets/figures/number_reviews_year.html" width="525" height="325" frameborder="0"></iframe>
 
   <p>As we can observe, the website's popularity has kept growing until 2011, but has decreased ever since. This is probably due to the competition introduced by smartphone apps!</p>
 
-  <div id="plot-months"></div>
-  <script src="plotly-scripts.js"></script>
+  <iframe src="/assets/figures/percentage_reviews_month.html" width="525" height="325" frameborder="0"></iframe>
 
   <p>We also observe that people review more beers in December than any other month...winter solitude or just tasting recent gifts?</p>
 
@@ -32,12 +76,20 @@
 
   <p>After extracting and enriching our data with the serving styles, we also wanted to understand how people drink their beer worldwide, or rather, what they drink it from.</p>
 
-  <div id="plot-distrib-regions-horizontal"></div>
-  <script src="plotly-scripts.js"></script>
+  <img src="/assets/figures/serving_type_world_region.png" alt="Serving style distribution per region">
 
   <p>It seems that there are quite a few differences! Micronesia and Sub-Saharan Africa appear to almost only drink from bottles, while Melanesia likes cans. Apart from these regions, all the others seem to follow the distribution that we modeled before.</p>
 
+  <h2>Categories of group analysis</h2>
+
+  <p> One of our burning question, was how the different beer styles are more prone to specific serving styles. We therefore decided to group the beer styles into more general categories, and see if we could find some patterns.</p>
+  
+  <img src="/assets/figures/serving_type_beer_group.png" alt="Serving style distribution per beer group">
+  <p> Here's a snapshot of the beer scene. Bottles? Yeah, they're the usual suspects. No surprises there. Cans? They're kicking it mostly with Lagers. You know, the misconception that canned drinks mean cheap stuff? Well, Lagers are kind of caught up in that stereotype. It happens. Let's just keep sipping and set the records straight. No frills, no fuss – just the real deal. Cheers to seeing through the haze! 🍻 </p>
+
+  </p>
 </body>
 
 </html>
 
+ -->
